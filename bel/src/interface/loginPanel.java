@@ -1,26 +1,26 @@
+package inteface;
 
-
-import java.awt.Desktop;
+import java.awt.event.ActionEvent;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class loginPanel extends TelaPanel {
-    private JButton botaologin;
-    public loginPanel(JPanel telas, JFrame janela){
-        super (telas, janela)
-        jLabel mensagem = new JLabel("conteudo de login Panel")
+public class LoginPanel extends TelaPanel{// extende a TelaPanel
+    private JButton botaoLogin;//método JButton
+    public LoginPanel(JPanel telas, JFrame janela) { //metodo contrutor
+        super(telas,janela);
+        JLabel mensagem = new JLabel("Conteúdo do Login Panel");//CRIA UMA MENSAGEM
 
-        JButton botao = new JButton("login")
-        botao.addActionListener(this);
+        JButton botao = new JButton("Fazer login"); //CRIA UM BOTÃO
+        botao.addActionListener(this);//chama o método override
 
-        this.add(mensagem);
-        this.add(botao);
-
+        this.add(mensagem);//ADICIONA A MENSAGEM NA TELA
+        this.add(botao);// ADICIONA O BOTÃO NA TELA
+        //this.add(imagem);//adiciona imagem
     }
+
     public void executarBotao(ActionEvent e){
-        trocaTela("Tela principal")
+        trocarTela("Tela Principal");
     }
-    
 }
